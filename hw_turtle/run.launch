@@ -1,0 +1,7 @@
+<launch>
+    <arg name="speed"/>
+    <node pkg="hw_turtle" type="turtle_pair.py" name="turtle_pair">
+          <param name="speed" value="$(arg speed)"/>
+    </node>
+    <node pkg='turtlesim' type='turtle_teleop_key' name='splinter' output='screen'/>
+</launch>
